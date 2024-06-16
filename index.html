@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana's Computer Engineering Portfolio</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js">
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">...loading<span>...incoming</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#sfprojects">Software Projects</a>
+            <a href="#hwprojects">Hardware Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Diana</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p>
+                From a very young age, I developed a deep connection with computers. 
+                I was fascinated by the way they were built, the way they powered on with the click of a button, 
+                and their overall operation. These functionalities and designs intrigued little me 
+                and helped spark my desire to create technology from scratch. 
+                Which had naturally led me into pursuing the Computer Engineering field. 
+                I want to deep dive into the full field, Software and Hardware, both now and in the future.
+            </p>
+            <div class="social-icons">
+                <a href="https://github.com/DianaCreates" target="_blank"><i 
+                class='bx bxl-github'></i></a>
+                <a href="mailto:dianaamay7@gmail.com"><i 
+                class='bx bxl-gmail'></i></a>
+                <a href="https://twitter.com/example" target="_blank"><i 
+                class='bx bxl-twitter'></i></a>
+                <a href="https://www.linkedin.com/in/example" target="_blank">
+                <i class='bx bxl-linkedin'></i></a>
+            </div>
+
+            <div class="btn-group">
+                <a href="https://profile.indeed.com/p/dianaa-41t24hz" target="_blank"><i class="btn">Resume</i></a>
+                <a href="#contact"
+                class="btn">Contact</a>
+            </div>
+        </div>
+            <div class="home-img">
+                <img src="face_image.jpg" alt="">
+            </div>
+    </section>
+
+    <section class="skills" id="skills">
+            <h2 class="heading">Skills</h2>
+            <p></p>
+
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018 - 2022                
+                    </div>
+                    <div class="timeline-content">
+                        <h3>High School</h3>
+                        <p>East Orange STEM Academy
+                        </p>
+                    </div>       
+             </div>
+
+             <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - Current              
+                    </div>
+                    <div class="timeline-content">
+                        <h3>University</h3>
+                        <p>New Jersey Institute of Technology, Major: Biology (changing to Computer Engineering)
+                        </p>
+                    </div>       
+              </div>
+         </div>
+    </section>
+
+    <section class="sfprojects" id="sfprojects">
+        <h2 class="heading">Software Projects</h2>
+        <div class="sfprojects-container">
+            <div class="sfprojects-box parallax" data-speed="1">
+                <div class="sfprojects-content">
+                    <img src="placeholder-image.png" alt="Project Image">
+                    <h4>Clownsic</h4>
+                    <p>My Very Own Spotify Clone App</p>
+                    <div class="sfprojects-links">
+                        <a href="https://example.com" target="_blank"><i class='bx bx-link-external'></i> View Project</a>
+                        <a href="https://github.com/example" target="_blank"><i class='bx bxl-github'></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sfprojects-box parallax" data-speed="2">
+                <div class="sfprojects-content">
+                    <img src="placeholder-image.png" alt="Project Image">
+                    <h4>16-Ball</h4>
+                    <p>My Own Version of 8-Ball, with my very own answers</p>
+                    <div class="sfprojects-links">
+                        <a href="https://example.com" target="_blank"><i class='bx bx-link-external'></i> View Project</a>
+                        <a href="https://github.com/example" target="_blank"><i class='bx bxl-github'></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hwprojects" id="hwprojects" data-scroll-section>
+        <h2 class="heading" data-scroll data-scroll-speed="1">Hardware Projects</h2>
+        <div class="coming-soon" data-scroll data-scroll-speed="2">
+            <h3>Coming Soon</h3>
+            <p>Stay Tuned for the Upcoming Hardware Projects!</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading"><span>Contact Me</span></h2>
+        <form action="send_email.php" method="POST">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" name="phonenumber" placeholder="Phone Number" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://github.com/DianaCreates" target="_blank"><i 
+                class='bx bxl-github'></i></a>
+            <a href="mailto:dianaamay7@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+            <a href="https://twitter.com/example"target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.linkedin.com/in/example" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="#home">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#sfprojects">Software Projects</a></li>
+            <li><a href="#hwprojects">Hardware Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyright">
+            © Diana Amay | All Rights Reserved and Made by Yours Truly
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
