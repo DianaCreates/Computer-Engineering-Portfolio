@@ -263,83 +263,86 @@ span{
     margin: 5rem 0;
 }
 .skills{
-    padding: 100px 15px;
+    padding: 80px 15px;
     background: var(--second-bg-color);
+    text-align: center;
 }
 .skills h2{
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    font-size: 8rem;
 }
-.timeline-items{
+.skills .skills-container{
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+.skills .skills-container .slide{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+.skills .skills-container .slide .item{
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    height: 400px;
     position: relative;
+    border-radius: 40px;
+    box-shadow: 0 20px 20px var(--bg-color);
+    background-position: center center;
+    background-size: cover; 
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-.timeline-items::before{
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background-color: var(--main-color);
-    left: calc(50% - 1px);
-}
-.timeline-item{
-    margin-bottom: 40px;
-    width: 100%;
-    position: relative;
-}
-.timeline-item:last-child{
-    margin-bottom: 0;
-}
-.timeline-item:nth-child(odd){
-    padding-right: calc(50% + 30px);
-    text-align: right;
-}
-.timeline-item:nth-child(even){
-    padding-left: calc(50% + 30px);
-}
-.timeline-dot{
-    height: 21px;
-    width: 21px;
-    background-color: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color);
-    position: absolute;
-    left: calc(50% - 8px);
-    border-radius: 50%;
-    top: 10px;
-}
-.timeline-date{
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--text-color);
-    margin: 6px 0 15px;
-}
-.timeline-content{
-    background-color: var(--bg-color);
-    border: 3px solid var(--main-color);
-    padding: 30px 50px;
-    border-radius: 4rem;
-    box-shadow: 0 0 10px var(--main-color);
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-.timeline-content:hover{
+.skills .skills-container .slide .item:hover{
     transform: scale(1.05);
+    box-shadow: 0 30px 30px var(--bg-color);
+}
+.skills .skills-container .slide .item .name{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+.skills .skills-container .slide .item .des{
+    position: absolute;
+    bottom: -10px; 
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; 
+    background-color: var(--bg-color);
+    z-index: 1;
+}
+.skills .skills-container .slide .item .des .icons{
+    display: flex;
+    font-size: 6rem;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--bg-color);
+}
+.skills .skills-container .slide .item .des .icons .box-icon{
+    margin: 0 3px;
+    color: #092142;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.skills .skills-container .slide .item .des .icons .box-icon:hover{
+    transform: scale(1.2) translateY(-10px);
+    background-color: var(--second-bg-color);
+    color: var(--main-color);
     box-shadow: 0 0 25px var(--borderline-color);
-}
-.timeline-content h3{
-    font-size: 20px;
-    color: var(--text-color);
-    margin: 0 0 10px;
-    font-weight: 500;
-}
-.timeline-content p{
-    color: var(--text-color);
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 22px;
 }
 ::-webkit-scrollbar{
     width: 15px;
@@ -365,6 +368,7 @@ span{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 6rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .sfprojects-box{
     color: var(--text-color);
@@ -372,14 +376,15 @@ span{
     padding: 2rem;
     border-radius: 1rem;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 0 25px var(--main-color);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    box-shadow: 0 10px 20px var(--second-bg-color); 
     overflow: hidden;
     transform: translateY(0);
     min-width: 30%;
 }
 .sfprojects-box:hover{
     transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); 
 }
 .sfprojects-box img{
     width: 100%;
