@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
-:root {
+:root{
     --bg-color: #000000;
     --second-bg-color: #131313;
     --text-color: #595d6a;
@@ -16,7 +16,6 @@
     --shadow-color: #f9fcff;
     --borderline-color: #595d6a;
 }
-
 html{
     font-size: 60%;
     overflow-x: hidden;
@@ -141,7 +140,6 @@ span{
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease-in-out;
 }
-
 .social-icons a:hover{
     color: var(--text-color);
     transform: scale(1.3)translateY(-5px);
@@ -276,14 +274,9 @@ span{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    position: relative;
-}
-.skills .skills-container .slide{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     gap: 20px;
-    transition: transform 0.5s ease;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minimax(300px, 1fr));
 }
 .skills .skills-container .slide .item{
     flex: 0 0 calc(50% - 20px);
@@ -327,7 +320,7 @@ span{
 }
 .skills .skills-container .slide .item .des .icons{
     display: flex;
-    font-size: 6rem;
+    font-size: 4rem;
     justify-content: center;
     align-items: flex-end;
     background-color: var(--bg-color);
@@ -367,23 +360,21 @@ span{
 .sfprojects-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 6rem;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    gap: 5rem;
+    transition: transform 0.5s ease;
 }
 .sfprojects-box{
     color: var(--text-color);
     background: var(--second-bg-color);
     padding: 2rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    border-radius: 3rem;
+    cursor: auto;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
     box-shadow: 0 10px 20px var(--second-bg-color); 
     overflow: hidden;
-    transform: translateY(0);
-    min-width: 30%;
 }
 .sfprojects-box:hover{
-    transform: translateY(-10px);
+    transform: scale(1.05);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); 
 }
 .sfprojects-box img{
@@ -545,23 +536,12 @@ sf.projects-content{
     header{
         padding: 2rem 3%;
     }
-    section{
-        padding: 10rem 3% 2rem;
-    }
-    .timeline-items::before{
-        left: 7px;
-    }
-    .timeline-item:nth-child(odd){
-        padding-right: 0;
-        text-align: left;
-    }
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even){
-        padding-left: 37px;
-    }
-    .timeline-dot{
-        left: 0;
-    }
+    .home{
+        padding: 5rem 5%;
+      }
+    .skills{
+          padding: 10rem 3% 2rem;
+      }
     .sfprojects{
         padding-bottom: 7rem;
     }
@@ -583,13 +563,12 @@ sf.projects-content{
         position: absolute;
         top: 100%;
         right: 0%;
-        width: 50%;
+        width: 30%;
         padding: 1rem 3%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
         border-bottom-left-radius: 2rem;
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
+        border: 2px solid var(--main-color);
         display: none;
     }
     .navbar.active{
@@ -598,29 +577,41 @@ sf.projects-content{
     .navbar a{
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 2rem 0;
         color: white;
     }
     .home{
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
+        margin: 3rem 3%;
+        margin-top: 10re,;
     }
     .home-content h3{
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 8rem;
-        margin-top: 3rem;
+        font-size: 6rem;
+        margin-top: 0.1rem;
     }
     .home-content p{
-        max-width: 600px;
-        margin: 0 auto;
+        max-width: 100%;
+        margin: 1rem 0;
     }
     .home-img img{
-        width: 56vw;
+        width: 100vw;
+        max-width: 100%;
     }
     .skills h2{
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
+        margin-top: 0.1rem;
+    }
+    .skills .skills-container{
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 40px 0;
+    }
+    .sfprojects h2{
+        margin-bottom: 10rem;
+        margin-top: 0.1rem;
     }
     .skills-container{
         grid-template-columns: repeat(1,1fr);
