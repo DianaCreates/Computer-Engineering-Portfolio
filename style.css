@@ -219,15 +219,15 @@ span{
     }
     41%,
     60%{
-        content: "Tech Explorer";
+        content: "Student";
     }
     61%,
     80%{
-        content: "Builder";
+        content: "Researcher";
     }
     81%,
     100%{
-        content: "Beta Game Tester";
+        content: "Aspiring Biomedical Scientist";
     }
 }
 @keyframes typing{
@@ -383,7 +383,7 @@ span{
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
 }
-sf.projects-content{
+.sfprojects-content{
     color: var(--text-color);
 }
 .sfprojects-content h4{
