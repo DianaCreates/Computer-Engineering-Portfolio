@@ -188,7 +188,7 @@ span{
     position: relative;
 }
 .text-animation span::before{
-    content: "Aspiring Computer Engineer";
+    content: "Aspiring Biomedical Scientist";
     color: var(--main-color);
     animation: words 20s infinite;
 }
@@ -404,29 +404,29 @@ span{
 .sfprojects-links a:hover{
     color: var(--borderline-color);
 }
-.hwprojects{
+.scresearch{
     background: var(--second-bg-color);
 }
-.hwprojects-box{
+.scresearch-box{
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.hwprojects .heading{
+.scresearch .heading{
     margin-bottom: 5rem;
     color: var(--text-color)
 }
-.hwprojects-item h2:hover{
+.scresearch-item h2:hover{
     border: 3px solid var(--main-color);
     transform: translateY(-10px)scale(1.03);
     box-shadow: 0 0 50px var(--main-color);
 }
-.hwprojects-item h2{
+.scresearch-item h2{
     font-size: 2.8rem;
 }
-.hwprojects-item p{
+.scresearch-item p{
     font-size: 1.3rem;
 }
 .contact{
@@ -533,19 +533,19 @@ span{
     }
 }
 @media(max-width:991px){
-    header{
+    header {
         padding: 2rem 3%;
     }
-    .home{
+    .home {
         padding: 5rem 5%;
       }
-    .skills{
+    .skills {
           padding: 10rem 3% 2rem;
       }
-    .sfprojects{
+    .sfprojects {
         padding-bottom: 7rem;
     }
-    .hwprojects{
+    .scresearch {
         padding-bottom: 7rem;
     }
     .contact form {
